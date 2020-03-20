@@ -3,7 +3,7 @@ function filter(inputArr, searchTerm) {
     if(!inputArr.length) throw Error("input cannot be empty");
     if(!searchTerm) throw Error("search term cannot be empty");
     return inputArr.filter(function(arrayElement) {
-        return arrayElement.url.includes(searchTerm);
+        return arrayElement.url.toLowerCase().includes(searchTerm.toLowerCase());
     });
 }
 
